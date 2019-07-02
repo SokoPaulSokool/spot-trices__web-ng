@@ -1,0 +1,131 @@
+.hero {
+  width: 100%;
+  min-height: 40rem;
+  // background: mediumpurple;
+  background-image: url("../../assets/curtain.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.hero-text {
+  position: absolute;
+  bottom: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-blend-mode: hue;
+  text-align: center;
+  .heading-big {
+    font-weight: 900;
+    font-size: 4rem;
+    text-align: center;
+    color: #ffeb3b;
+  }
+  .heading-medium {
+    font-weight: 700;
+    font-size: 2rem;
+    text-align: center;
+    color: #ffffff;
+  }
+}
+
+.hero-light--right {
+  display: block;
+  position: absolute;
+  width: 60%;
+  height: 40rem;
+  background: linear-gradient(20deg, transparent, #ffeb3b);
+  clip-path: polygon(0 0, 0 0, 100% 100%, 70% 100%);
+  animation: motion1 5s ease-in 0s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  background-blend-mode: hard-light;
+}
+.hero-light--left {
+  display: block;
+  position: absolute;
+  right: 0;
+  width: 60%;
+  height: 40rem;
+  background-blend-mode: screen;
+  background: linear-gradient(20deg, transparent, #ffeb3b);
+  clip-path: polygon(100% 0, 100% 0, 30% 100%, 0 100%);
+  animation: motion2 10s ease-in 0s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.hero-light--up {
+  display: block;
+  right: 0;
+  width: 10rem;
+  height: 100%;
+  background-blend-mode: screen;
+  background: linear-gradient(transparent, #ffeb3b);
+  clip-path: polygon(0 0, 100% 0, 50% 100%, 50% 100%);
+  animation: motion3 10s ease-in 0s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+.hero-lights--bottom {
+  height: 5rem;
+  width: 100%;
+  position: absolute;
+  bottom: 15%;
+  display: flex;
+  justify-content: space-around;
+}
+
+@keyframes motion1 {
+  0% {
+    clip-path: polygon(0 0, 0 0, 100% 100%, 70% 100%);
+  }
+  20% {
+  }
+  50% {
+  }
+  80% {
+  }
+  100% {
+    clip-path: polygon(0 0, 0 0, 70% 100%, 40% 100%);
+  }
+}
+
+@keyframes motion2 {
+  0% {
+    clip-path: polygon(100% 0, 100% 0, 30% 100%, 0 100%);
+  }
+  20% {
+  }
+  50% {
+  }
+  80% {
+  }
+  100% {
+    clip-path: polygon(100% 0, 100% 0, 60% 100%, 30% 100%);
+  }
+}
+
+@keyframes motion3 {
+  0% {
+    transform: rotateY(0deg);
+  }
+  20% {
+  }
+  50% {
+  }
+  80% {
+  }
+  100% {
+    transform: rotateY(90deg);
+  }
+}
+
+.hero-light--circle {
+  position: absolute;
+  width: 10rem;
+  height: 10rem;
+  left: 50%;
+  bottom: 1%;
+  border-radius: 50%;
+  background-color: yellow;
+  transform: translate(-50%, -5%) skewY(-120deg) rotateX(30deg);
+}
